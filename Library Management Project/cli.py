@@ -21,9 +21,15 @@ while True:
     if choice == "1":
         # --- Add Book ---
         # get input from user: title, author, genre
+        title = input("Enter books title:\n").lower()
+        author = input("Enter books author name \n").lower()
+        genre = input("Enter books genre \n").lower()
         # create Book object
+        book = Book(title, author, genre)
         # call library.add_book(book)
+        library.add_book(book)
         # call library.save_library()
+        library.save_library(book)
         pass
 
     elif choice == "2":
