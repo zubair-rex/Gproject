@@ -110,7 +110,7 @@ class Library:
         found = False
         for book in self.books:
             if genre == None and available == None:
-                print(f"Name: {book.title} | Author: {book.author} | Genre: {book.genre} | Available: {book.is_available}")
+                print(f"Name:---{book.title}---\n|\t-Author: {book.author}\n|\t-Genre: {book.genre}\n|\t-Available: {book.is_available}")
                 found = True
             if genre is not None and book.genre == genre:
                 print(f"Name: {book.title} | Author: {book.author} | Genre: {book.genre} | Availbale: {book.is_available}")
