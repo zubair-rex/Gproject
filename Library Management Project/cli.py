@@ -19,21 +19,18 @@ while True:
     choice = input("Choose an option: ")
 
     if choice == "1":
-        # --- Add Book ---
-        # get input from user: title, author, genre
+        print("--- Add Book ---")
         title = input("Enter books title:\n").lower()
         author = input("Enter books author name \n").lower()
         genre = input("Enter books genre \n").lower()
-        # create Book object
         book = Book(title, author, genre)
-        # call library.add_book(book)
         library.add_book(book)
-        # call library.save_library()
+       
         library.save_library()
         pass
 
     elif choice == "2":
-        # --- View Books ---
+        print(" --- View Books ---")
         print("===View options===")
         print("1.View all books")
         print("2.View books by Specific Genre")
@@ -63,31 +60,37 @@ while True:
         pass
 
     elif choice == "3":
-        # --- Borrow Book ---
-        # get input: title, borrower_name
-        # get borrow_date as datetime.date.today()
-        # call library.borrow_book(title, borrower_name, borrow_date)
-        # call library.save_library()
+        print("--- Borrow Book ---")
+        title = input("Enter book title: ").lower()
+        borrower_name = input("Enter borrower name: ").lower()
+        borrow_date = datetime.date.today()
+        library.borrow_book(title, borrower_name, borrow_date)
+        
+        library.save_library()
         pass
 
     elif choice == "4":
-        # --- Return Book ---
-        # get input: title
-        # call library.return_book(title)
-        # call library.save_library()
+        print("--- Return Book ---")
+        title = input("Enter your book title: ").lower()
+        library.return_book(title)
+
+        library.save_library()
         pass
 
     elif choice == "5":
-        # --- Search Book ---
-        # get input: search string (title, author, or genre)
-        # call library.search_book(search_string)
+        print("--- Search Book ---")
+
+        title = input("Enter book title or few letters from title: ")
+        print("Available books: \n")
+        library.search_book(title)
         pass
 
     elif choice == "6":
-        # --- Delete Book ---
-        # get input: title
-        # call library.delete_book(title)
-        # call library.save_library()
+        print("--- Delete Book ---")
+        title = input("Enter book title you wanna delete: ").lower()
+        library.delete_book(title)
+
+        library.save_library()
         pass
 
     elif choice == "7":

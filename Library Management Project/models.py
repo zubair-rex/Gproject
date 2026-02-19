@@ -19,7 +19,7 @@ class Book:
             "genre": self.genre,
             "is_available": self.is_available,
             "borrower_name": self.borrower_name,
-            "borrow_date": self.borrow_date
+            "borrow_date": self.borrow_date.strftime("%Y-%m-%d") if self.borrow_date else None
         }
 
     #classmethod to create book from dic
@@ -97,12 +97,13 @@ class Library:
 
     #by title, author, genre
     def search_book(self, name):
+        foud = False
         for book in self.books:
-            if book.title == name or book.genre == name or book.author == name:
-                print(f"This books is available: \n {book.title}")
-                return
-        
-        print(f"we didn't found {name}")
+            if name in book.title:
+                print(book.title)
+                foud = True
+        if not foud:
+            print(f"we didn't found {name}")
     
     #show all books, filter by genre/availablity
     def view_books(self, genre=None, available=None):

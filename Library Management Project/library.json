@@ -22,13 +22,5 @@
         "is_available": true,
         "borrower_name": null,
         "borrow_date": null
-    },
-    {
-        "title": "copywriting secrets",
-        "author": "jim edwards",
-        "genre": "marketing",
-        "is_available": true,
-        "borrower_name": null,
-        "borrow_date": null
     }
 ]
