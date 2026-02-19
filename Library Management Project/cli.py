@@ -29,14 +29,37 @@ while True:
         # call library.add_book(book)
         library.add_book(book)
         # call library.save_library()
-        library.save_library(book)
+        library.save_library()
         pass
 
     elif choice == "2":
         # --- View Books ---
-        # optional: get genre filter from user
-        # optional: get availability filter (y/n) from user
-        # call library.view_books(genre=..., available=...)
+        print("===View options===")
+        print("1.View all books")
+        print("2.View books by Specific Genre")
+        print("3.View books by availability")
+        print("4.View borrowed books")
+        options = input("Enter your option: ")
+
+        if options == "1":
+            print("----All Books----")
+            library.view_books()
+
+        elif options == "2":
+            genre = input("Enter books genre: ").lower()
+            print(f"----All Books in {genre} genre----")
+            library.view_books(genre)
+
+        elif options == "3":
+            print("----All Available Books----")
+            library.view_books(available=True)
+
+        elif options == "4":  
+            print("----All Borrowed Books----")
+            library.view_books(available=False)
+        else:
+            print("Enter a valid option")
+        
         pass
 
     elif choice == "3":

@@ -6,5 +6,29 @@
         "is_available": true,
         "borrower_name": null,
         "borrow_date": null
+    },
+    {
+        "title": "dotcom secrets",
+        "author": "russell brunson",
+        "genre": "business",
+        "is_available": true,
+        "borrower_name": null,
+        "borrow_date": null
+    },
+    {
+        "title": "100m offers",
+        "author": "alex hormozi",
+        "genre": "business",
+        "is_available": true,
+        "borrower_name": null,
+        "borrow_date": null
+    },
+    {
+        "title": "copywriting secrets",
+        "author": "jim edwards",
+        "genre": "marketing",
+        "is_available": true,
+        "borrower_name": null,
+        "borrow_date": null
     }
 ]
