@@ -1,0 +1,10 @@
+[
+    {
+        "title": "atomic habits",
+        "author": "james clear",
+        "genre": "self help",
+        "is_available": true,
+        "borrower_name": null,
+        "borrow_date": null
+    }
+]
