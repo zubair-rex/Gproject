@@ -36,6 +36,7 @@ while True:
         print("2.View books by Specific Genre")
         print("3.View books by availability")
         print("4.View borrowed books")
+        print("5.exit")
         options = input("Enter your option: ")
 
         if options == "1":
@@ -54,6 +55,8 @@ while True:
         elif options == "4":  
             print("----All Borrowed Books----")
             library.view_books(available=False)
+        elif options == "5":
+            pass
         else:
             print("Enter a valid option")
         
